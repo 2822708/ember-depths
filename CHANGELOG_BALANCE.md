@@ -1,0 +1,14 @@
+# Campaign, rewards and build choices
+
+- Damage has a base cap of 90 (including permanent starting bonuses) and a final single-hit cap of 200 (including contracts and sword waves). Starting from 25, eight damage blessings reach 78 and both contracts reach 175. Capped cards leave all reward pools; stale shop cards cannot charge currency.
+
+- The campaign ends at floor 20 after the final exit encounter. Floors 5, 10 and 15 guarantee moss, lava and frost guardians; the final boss combines their skills and accelerates below half health.
+- Only the first two ordinary combat clears per floor grant a blessing. Later clears open doors and exit portals without a reward. The quota is reserved on clear, not on card rolling. Cursed encounters have 40% more HP and 25% more damage and grant two consecutive choices. Treasure grants one free extra choice; a shop sells one choice for 18 kill-earned embers and preserves its stock on revisits.
+- Single stat increments are smaller for the bounded reward budget: damage x1.15 (rounded, at most eight stacks per run), cooldown x0.93, speed +8, HP +12, range +8, knockback +20. Enemy base values and depth scaling remain as configured; finite completion replaces an unlimited descent.
+- Three once-per-run contracts add tradeoffs: x1.4 damage for 25% maximum HP, double attack speed for loss of dodge, and x1.6 damage for a lethal one-HP cost on every swing. Damage multipliers apply to later upgrades and sword waves.
+- Theme bosses have independent pixel silhouettes and loadouts: moss vines and empowered summons, lava projectiles and charge, frost slowing fields and projectiles. Zone warnings precede activation; all zones and shots clear when changing rooms or completing encounters. Normal hits do not interrupt boss casts; wall charges expose a stun window.
+- Event audio uses cached synthesized noise, square, saw, sine and chime waveforms with separate envelopes. No external assets or gameplay RNG consumption are required.
+
+Rendering remains cached: room static geometry and HUD are offscreen textures, cursor/feedback are separate nodes, styles are reused, and the application is capped at 60 FPS.
+
+Validation: smoke, input, expansion, render cache and campaign integration tests. Campaign coverage includes a complete automatic 20-floor clear/reward/descent run, exact ordinary/special reward budgets, multiplicative damage caps, stale shop cards, economy, contracts, theme skills and synthesized PCM. Visual captures cover the three guardians, shop, all 15 blessing icons, and victory. Automated combat clears verify state transitions, not human difficulty tuning.
