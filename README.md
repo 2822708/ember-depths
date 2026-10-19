@@ -10,6 +10,8 @@
 
 网页版使用单线程 WebAssembly，无需额外的跨域隔离响应头。请使用支持 WebGL 2 的现代电脑浏览器，首次加载完成后点击开始以启用音效。当前操作依赖键盘和鼠标，暂不提供手机触控操作。网页按 Esc 可能先退出全屏，窗口模式下也可使用商店内的退出按钮。
 
+网页中文字体使用 ZCOOL KuaiLe（SIL Open Font License 1.1），随工程分发，许可见 `assets/fonts/ZCOOL-OFL.txt`。
+
 本地网页导出（需要安装 Godot 4.4.1 Web 导出模板）：`godot --headless --path . --export-release Web build/web/index.html`。导出后通过 HTTP 静态服务器访问，不能直接双击 HTML 文件。
 
 - 双击 `play.cmd`（随工程提供本地 Godot 工具时可直接运行）。

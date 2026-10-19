@@ -64,6 +64,7 @@ func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	font = SystemFont.new()
 	font.font_names = PackedStringArray(["Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", "Arial"])
+	font.fallbacks = [preload("res://assets/fonts/ZCOOLKuaiLe-Regular.ttf")]
 	display_font = SystemFont.new()
 	display_font.font_names = PackedStringArray(["Georgia", "Times New Roman"])
 	_setup_cache()

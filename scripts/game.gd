@@ -112,6 +112,8 @@ var permanent_damage := 0
 var trails: Array[Dictionary] = []
 
 func _ready() -> void:
+	if OS.has_feature("web"):
+		ThemeDB.fallback_font = preload("res://assets/fonts/ZCOOLKuaiLe-Regular.ttf")
 	rng.randomize()
 	_setup_input()
 	world = Node2D.new()
